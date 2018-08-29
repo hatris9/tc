@@ -6,6 +6,9 @@ using namespace std;
 
 class Cryptography {
 public:
+    long long encrypt(vector<int> numbers) {
+        return encrypt3( numbers );
+    }
     long long encrypt1(vector<int> numbers) {
         std::sort(numbers.begin(), numbers.end());
         numbers[0]++;
@@ -26,7 +29,7 @@ public:
         }
         return ret;
     }
-    long long encrypt(vector<int> numbers) {
+    long long encrypt3(vector<int> numbers) {
         int min_num = numbers[0];
         int min_idx = 0;
         for (int i=1; i < numbers.size(); i++) {
